@@ -20,13 +20,6 @@ export default class Lista extends React.Component {
     componentWillUnmount() {
     }
 
-    setDigimons() {
-        const { digimonUpdated } = this.props
-        digimonUpdated(this.state.digimons)
-
-        this.getAllDigimons()
-    }
-
     getAllDigimons() {
         const { digimons } = this.props
         this.setState({
@@ -39,7 +32,10 @@ export default class Lista extends React.Component {
         fetch('https://digimon-api.vercel.app/api/digimon')
         .then(res => res.json())
         .then(res => {
-            this.setDigimons(res)
+            const { digimonUpdated } = this.props
+            console.log(digimonUpdated);
+            digimonUpdated(res)
+            this.getAllDigimons()
         })
         .catch((error) => {
             console.log(error);

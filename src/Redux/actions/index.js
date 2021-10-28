@@ -8,5 +8,5 @@ export const clickButton = value => ({
 
 export const digimonUpdated = value => ({
     type: DIGIMON_UPDATE_VALUE,
-    digimon: value
+    digimons: value
 })

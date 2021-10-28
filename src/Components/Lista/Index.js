@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import { digimonUpdated } from '../../Redux/actions';
-import { Lista } from './Lista';
+import Lista from './Lista';
 
 const mapStateToProps = store => ({
     digimons: store.digimonState.digimons
