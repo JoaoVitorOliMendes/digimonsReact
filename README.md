@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# "Digimons" React app
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+React app that retrieves digimons by the DigimonApi and display them on the main page
 
 ## Available Scripts
 
